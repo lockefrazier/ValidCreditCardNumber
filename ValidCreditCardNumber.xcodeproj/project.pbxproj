@@ -13,6 +13,7 @@
 		8735218D1A685ED900C64D71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8735218C1A685ED900C64D71 /* Images.xcassets */; };
 		873521901A685ED900C64D71 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8735218E1A685ED900C64D71 /* LaunchScreen.xib */; };
 		8735219C1A685ED900C64D71 /* ValidCreditCardNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8735219B1A685ED900C64D71 /* ValidCreditCardNumberTests.swift */; };
+		878E7F231A68749000EF7DC1 /* LuhnsAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878E7F221A68749000EF7DC1 /* LuhnsAlgorithm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		873521951A685ED900C64D71 /* ValidCreditCardNumberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValidCreditCardNumberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8735219A1A685ED900C64D71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8735219B1A685ED900C64D71 /* ValidCreditCardNumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidCreditCardNumberTests.swift; sourceTree = "<group>"; };
+		878E7F221A68749000EF7DC1 /* LuhnsAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuhnsAlgorithm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				8735218C1A685ED900C64D71 /* Images.xcassets */,
 				8735218E1A685ED900C64D71 /* LaunchScreen.xib */,
 				873521831A685ED900C64D71 /* Supporting Files */,
+				878E7F221A68749000EF7DC1 /* LuhnsAlgorithm.swift */,
 			);
 			path = ValidCreditCardNumber;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				878E7F231A68749000EF7DC1 /* LuhnsAlgorithm.swift in Sources */,
 				873521881A685ED900C64D71 /* ViewController.swift in Sources */,
 				873521861A685ED900C64D71 /* AppDelegate.swift in Sources */,
 			);
@@ -405,6 +409,7 @@
 				873521A11A685ED900C64D71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		873521A21A685ED900C64D71 /* Build configuration list for PBXNativeTarget "ValidCreditCardNumberTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				873521A41A685ED900C64D71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
