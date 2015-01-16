@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             var creditCardString = creditTextField.text
             
-            if let creditCardNumber = creditCardString?.toInt() {
+            if let creditCardNumber: UInt64 = creditCardString?.toInt() {
                 
                 var valid:Bool = validCard(creditCardNumber)
                 
