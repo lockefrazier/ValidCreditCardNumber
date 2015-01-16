@@ -27,7 +27,7 @@
                                 <rect key="frame" x="39" y="269" width="145" height="31"/>
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="go"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" returnKeyType="go"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOa-Bj-tpD">
                                 <rect key="frame" x="205" y="269" width="69" height="30"/>
@@ -52,6 +52,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="gOa-Bj-tpD" secondAttribute="trailing" constant="30" id="xGr-0J-TPy"/>
                         </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="checkButton" destination="gOa-Bj-tpD" id="pUd-Om-JxH"/>
                         <outlet property="creditTextField" destination="T5e-eA-0g4" id="anH-v8-MuN"/>

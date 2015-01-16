@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var creditTextField: UITextField!
     @IBOutlet weak var validLabel: UILabel!
@@ -16,8 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        self.creditTextField.delegate = self    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -29,16 +28,35 @@ class ViewController: UIViewController {
             
             var creditCardString = creditTextField.text
             
-            if creditCardString != nil {
-                validCard(creditCardString.toInt()!)
+            if let creditCardNumber = creditCardString?.toInt() {
+                
+                var valid:Bool = validCard(creditCardNumber)
+                
                 checkButton.setTitle("Recheck?", forState: UIControlState.Normal)
+                
+                validLabel.hidden = false
+                
+                if valid {
+                    validLabel.text = "VALID"
+                } else {
+                    validLabel.text = "INVALID"
+                }
+                
             } else {
                 creditTextField.placeholder = "Must Enter Number"
             }
             
         } else {
             checkButton.setTitle("Check", forState: UIControlState.Normal)
+            validLabel.hidden = true
+            creditTextField.text = nil
+            creditTextField.placeholder = "Card Number"
         }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        creditTextField.resignFirstResponder()
+        return true
     }
     
 
