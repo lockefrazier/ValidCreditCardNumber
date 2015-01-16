@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var creditTextField: UITextField!
+    @IBOutlet weak var validLabel: UILabel!
+    @IBOutlet weak var checkButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +24,23 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func checkCardNumber() {
+        if checkButton.titleLabel?.text == "Check" {
+            
+            var creditCardString = creditTextField.text
+            
+            if creditCardString != nil {
+                validCard(creditCardString.toInt()!)
+                checkButton.setTitle("Recheck?", forState: UIControlState.Normal)
+            } else {
+                creditTextField.placeholder = "Must Enter Number"
+            }
+            
+        } else {
+            checkButton.setTitle("Check", forState: UIControlState.Normal)
+        }
+    }
+    
 
 }
 

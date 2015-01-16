@@ -9,6 +9,9 @@
 import Foundation
 
 func validCard (var creditCardNumber: Int) -> Bool {
+    
+    println("\(creditCardNumber)")
+    
     var numberOfDigits = 0
     
     var sumDigits = 0

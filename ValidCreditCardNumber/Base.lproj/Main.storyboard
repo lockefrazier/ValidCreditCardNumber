@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -22,28 +23,40 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOa-Bj-tpD">
-                                <rect key="frame" x="214" y="269" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="135" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4234567890123" borderStyle="roundedRect" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T5e-eA-0g4">
-                                <rect key="frame" x="60" y="269" width="135" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="145" placeholderIntrinsicHeight="31" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="card number" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T5e-eA-0g4">
+                                <rect key="frame" x="39" y="269" width="145" height="31"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="go"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOa-Bj-tpD">
+                                <rect key="frame" x="205" y="269" width="69" height="30"/>
+                                <state key="normal" title="Check">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkCardNumber" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zbJ-ti-OmE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="MBA-vG-3yU" secondAttribute="centerX" id="NLd-Vr-VWK"/>
-                            <constraint firstAttribute="centerX" secondItem="gOa-Bj-tpD" secondAttribute="centerX" constant="-77" id="RHS-xY-v8y"/>
-                            <constraint firstAttribute="centerX" secondItem="T5e-eA-0g4" secondAttribute="centerX" constant="32.5" id="Vel-SC-Zvi"/>
-                            <constraint firstAttribute="centerY" secondItem="T5e-eA-0g4" secondAttribute="centerY" id="Xbx-PI-3As"/>
-                            <constraint firstAttribute="centerY" secondItem="MBA-vG-3yU" secondAttribute="centerY" constant="-128.5" id="ofr-kF-UUt"/>
-                            <constraint firstAttribute="centerY" secondItem="gOa-Bj-tpD" secondAttribute="centerY" id="qv8-oy-ftg"/>
+                            <constraint firstAttribute="centerY" secondItem="MBA-vG-3yU" secondAttribute="centerY" constant="-128.5" id="04M-ru-SRB"/>
+                            <constraint firstAttribute="centerY" secondItem="T5e-eA-0g4" secondAttribute="centerY" id="7xj-Ub-WYo"/>
+                            <constraint firstAttribute="centerX" secondItem="T5e-eA-0g4" secondAttribute="centerX" constant="48.5" id="DrU-Up-Tem"/>
+                            <constraint firstItem="T5e-eA-0g4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="23" id="QlR-BU-1Dw"/>
+                            <constraint firstAttribute="centerX" secondItem="MBA-vG-3yU" secondAttribute="centerX" id="aRk-Qh-rqu"/>
+                            <constraint firstItem="gOa-Bj-tpD" firstAttribute="leading" secondItem="T5e-eA-0g4" secondAttribute="trailing" constant="21" id="fJG-2o-f3Z"/>
+                            <constraint firstAttribute="centerY" secondItem="gOa-Bj-tpD" secondAttribute="centerY" id="mKu-1L-7kz"/>
+                            <constraint firstAttribute="centerX" secondItem="gOa-Bj-tpD" secondAttribute="centerX" constant="-79.5" id="mef-HP-vuD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gOa-Bj-tpD" secondAttribute="trailing" constant="30" id="xGr-0J-TPy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="checkButton" destination="gOa-Bj-tpD" id="pUd-Om-JxH"/>
+                        <outlet property="creditTextField" destination="T5e-eA-0g4" id="anH-v8-MuN"/>
+                        <outlet property="validLabel" destination="MBA-vG-3yU" id="TLF-3Y-uQd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
